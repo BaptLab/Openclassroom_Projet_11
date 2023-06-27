@@ -120,6 +120,39 @@ header {
   margin: 20px;
 }
 
+.carrousel-container {
+  width: 1240px;
+  height: 415px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.carrousel-img {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.slide-arrow {
+  position: absolute;
+  cursor: pointer;
+}
+
+.next-slide-arrow {
+  right: 23px;
+  top: 156.7px;
+  transform: rotate(180deg);
+}
+
+.previous-slide-arrow {
+  left: 23px;
+  top: 156.7px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
