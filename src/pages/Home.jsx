@@ -1,6 +1,7 @@
 import Header from "../components/Header.jsx";
 import Banner from "../components/Banner.jsx";
 import data from "../datas/logements.json";
+import Footer from "../components/Footer.jsx";
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
           </a>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

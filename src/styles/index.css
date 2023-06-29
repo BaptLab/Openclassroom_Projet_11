@@ -29,10 +29,16 @@ body {
   font-family: Montserrat;
   max-width: 1400px;
   min-width: 1200px;
+  justify-content: center;
+}
+
+.page-container {
+  width: 1240px;
 }
 
 header {
-  height: 171px;
+  margin-top: 40px;
+  margin-bottom: 63px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,6 +159,159 @@ header {
   top: 156.7px;
 }
 
+.infos-container {
+  margin-top: 30px;
+}
+
+.basic-infos-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basic-infos-title {
+  font-size: 2.25em;
+  font-weight: 500;
+  color: #ff6060;
+}
+
+.basic-infos-location {
+  font-weight: 1.125em;
+  color: #ff6060;
+  font-weight: 500;
+}
+
+.owner-infos-container {
+  display: flex;
+}
+
+.owner-name {
+  font-weight: 1.125em;
+  color: #ff6060;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.owner-picture {
+  object-fit: cover;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  align-items: middle;
+}
+
+.tags-and-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tags-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.tag {
+  margin-right: 10px;
+  padding: 2.5px 40px;
+  color: white;
+  background-color: #ff6060;
+  border-radius: 10px;
+}
+
+.collapse-section {
+  margin-top: 24px;
+  display: flex;
+  gap: 76px;
+}
+
+.collapse-container {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.collapse-header {
+  display: flex;
+  background-color: #ff6060;
+  color: white;
+  justify-content: space-between;
+  padding: 13px 20px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.collapse-content-container {
+  background-color: #f6f6f6;
+  padding: 30px 15px 40px 15px;
+  height: 249px;
+}
+
+.collapse-content {
+  color: #ff6060;
+  font-size: 1.125em;
+  font-weight: 400;
+}
+
+footer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: 209px;
+  padding-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.logo-footer {
+  width: 122px;
+}
+
+.copyright {
+  margin-top: 40px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+/* Error404 Page */
+.error-infos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.error404 {
+  margin-top: 140px;
+  font-size: 18em;
+  display: flex;
+  justify-content: center;
+  color: #ff6060;
+  font-weight: 700;
+  padding: 0;
+}
+
+.error-infos {
+  font-size: 2.25em;
+  color: #ff6060;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.back-home-btn {
+  color: #ff6060;
+  font-size: 1.125em;
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+  margin-top: 182px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
