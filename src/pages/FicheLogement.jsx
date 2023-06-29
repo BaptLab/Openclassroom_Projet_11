@@ -7,44 +7,81 @@ import Tags from "../components/Tags";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { useState } from "react";
+
+let currentImage = 0;
 
 function FicheLogement() {
   //Récupération de l'ID dans l'URL
   const params = useParams();
   let logementData = data.find((logement) => logement.id === params.id);
+  const images = logementData.pictures;
+
+  //state du carrousel
+  let [img, setImage] = useState(images[currentImage]);
+
+  function HandleClickArrows(e) {
+    const arrowClicked = e.target.id;
+    if (arrowClicked === "right-arrow") {
+      console.log(currentImage);
+      if (currentImage === images.length - 1) {
+        currentImage = 0;
+        setImage(images[currentImage]);
+      } else {
+        currentImage++;
+        setImage(images[currentImage]);
+      }
+
+      setImage(images[currentImage]);
+    } else if (arrowClicked === "left-arrow") {
+      currentImage--;
+      console.log(currentImage);
+      if (currentImage === -1) {
+        currentImage = images.length - 1;
+        setImage(images[currentImage]);
+      } else {
+        setImage(images[currentImage]);
+      }
+    }
+  }
 
   //Render conditionnel
   if (logementData === undefined) {
     return <Error404 />;
   } else {
     //Carroussel
-    const images = logementData.pictures.map((picture, index) => {
+    /* const images = logementData.pictures.map((picture, index) => {
       return (
         //créer un état/state qui change lors du clic sur la flêche, qui affiche l'url différente sleon l'index
-        <img
-          className="carrousel-img"
-          alt={"Photo du logement n°" + (index + 1)}
-          src={picture}
-          key={index}
-          //ajouter un id
-        ></img>
+        
       );
-    });
+    }); */
 
     return (
       <div className="page-container">
         <Header />
+        {/* Carrousel */}
         <div className="carrousel-container">
-          {images}
           <img
+            className="carrousel-img"
+            alt={"s du logemddent n°"}
+            src={img}
+
+            //ajouter un id
+          ></img>
+          <img
+            onClick={HandleClickArrows}
             src={arrow}
             alt="next slide"
             className="slide-arrow next-slide-arrow"
+            id="right-arrow"
           ></img>
           <img
+            onClick={HandleClickArrows}
             src={arrow}
             alt="previous slide"
             className="slide-arrow previous-slide-arrow"
+            id="left-arrow"
           ></img>
         </div>
         <div className="infos-container">

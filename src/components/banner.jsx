@@ -1,9 +1,7 @@
-import logo from "../assets/banner-forest.png";
-
-function Banner() {
+function Banner(props) {
   return (
     <div className="banner">
-      <img className="img-banner" alt="banner" src={logo}></img>
+      <img className="img-banner" alt="banner" src={props.picture}></img>
       <h2 className="catchphrase">Chez vous, partout et ailleurs</h2>
     </div>
   );

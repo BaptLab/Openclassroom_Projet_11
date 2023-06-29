@@ -2,12 +2,13 @@ import Header from "../components/Header.jsx";
 import Banner from "../components/Banner.jsx";
 import data from "../datas/logements.json";
 import Footer from "../components/Footer.jsx";
+import bannerPicture from "../assets/banner-forest.png";
 
 function Home() {
   return (
     <div>
       <Header pageType="Home" />
-      <Banner />
+      <Banner picture={bannerPicture} />
       <div className="logements-container">
         {data.map((logement) => (
           <a
