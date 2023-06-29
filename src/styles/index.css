@@ -240,10 +240,32 @@ header {
   border-radius: 10px;
 }
 
+.collapse-open-btn.aiming-up {
+  transform: rotate(0deg);
+  transition-duration: 0.3s;
+}
+
+.collapse-open-btn.aiming-down {
+  transform: rotate(180deg);
+  transition-duration: 0.3s;
+}
+
 .collapse-content-container {
   background-color: #f6f6f6;
   padding: 30px 15px 40px 15px;
   height: 249px;
+}
+
+.collapse-content-container.active {
+  opacity: 0;
+  height: 0px;
+  padding: 0px;
+  transition-duration: 0.2s;
+}
+
+.collapse-content-container.inactive {
+  opacity: 1;
+  transition-duration: 0.2s;
 }
 
 .collapse-content {
@@ -251,6 +273,7 @@ header {
   font-size: 1.125em;
   font-weight: 400;
 }
+/* Footer composant */
 
 footer {
   margin-top: 100px;
@@ -312,6 +335,22 @@ footer {
   justify-content: center;
   margin-top: 182px;
 }
+
+/* About */
+
+.collapse-about-page-container {
+  margin: 0px 115px;
+}
+
+.about-collapse-container {
+  margin-top: 31px;
+}
+
+.about-collapse-content-container {
+  height: auto;
+  padding: 25px 15px 18px 15px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

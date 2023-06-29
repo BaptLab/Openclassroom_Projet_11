@@ -3,14 +3,21 @@ import { useState } from "react";
 
 function Collapse(props) {
   const objectRef = props.id;
-  /* const [display, changeDisplay] = useState(false); */
+  const [open, setOpen] = useState(false);
   return (
     <div className="collapse-container">
       <div className="collapse-header">
         <h6 className="collapse-title">{props.type}</h6>
-        <img alt="open collapse" className="collapse-open-btn" src={collapseArrow}></img>
+        <img
+          alt="open collapse"
+          className={`collapse-open-btn ${open ? "aiming-up" : "aiming-down"}`}
+          src={collapseArrow}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        ></img>
       </div>
-      <div className="collapse-content-container">
+      <div className={`collapse-content-container ${open ? "active" : "inactive"}`}>
         {props.type === "Description" ? (
           <p className="collapse-content">{objectRef.description}</p>
         ) : (

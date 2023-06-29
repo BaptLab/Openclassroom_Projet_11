@@ -6,18 +6,18 @@ import Stars from "../components/Stars";
 import Tags from "../components/Tags";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 function FicheLogement() {
   //Récupération de l'ID dans l'URL
   const params = useParams();
   let logementData = data.find((logement) => logement.id === params.id);
-  console.log(logementData);
-  //Carroussel
 
   //Render conditionnel
   if (logementData === undefined) {
     return <Error404 />;
   } else {
+    //Carroussel
     const images = logementData.pictures.map((picture, index) => {
       return (
         //créer un état/state qui change lors du clic sur la flêche, qui affiche l'url différente sleon l'index
@@ -33,6 +33,7 @@ function FicheLogement() {
 
     return (
       <div className="page-container">
+        <Header />
         <div className="carrousel-container">
           {images}
           <img
