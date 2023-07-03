@@ -6,14 +6,16 @@ import bannerPicture from "../assets/banner-mountain.png";
 
 function About() {
   return (
-    <div className="page-container">
-      <Header pageType="About" />
-      <Banner picture={bannerPicture} />
-      <div className="collapse-about-page-container">
-        <CollapseAbout type="Fiabilité" />
-        <CollapseAbout type="Respect" />
-        <CollapseAbout type="Service" />
-        <CollapseAbout type="Sécurité" />
+    <div className="global-container">
+      <div className="content-container content-container-about">
+        <Header pageType="About" />
+        <Banner picture={bannerPicture} />
+        <div className="collapse-about-page-container">
+          <CollapseAbout type="Fiabilité" />
+          <CollapseAbout type="Respect" />
+          <CollapseAbout type="Service" />
+          <CollapseAbout type="Sécurité" />
+        </div>
       </div>
       <Footer />
     </div>
