@@ -171,6 +171,14 @@ header {
   top: 156.7px;
 }
 
+.carrousel-page-number {
+  position: absolute;
+  color: white;
+  bottom: 25px;
+  left: 49%;
+  font-weight: 500;
+}
+
 .infos-container {
   margin-top: 30px;
 }

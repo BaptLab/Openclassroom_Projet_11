@@ -49,14 +49,6 @@ function FicheLogement() {
   if (logementData === undefined) {
     return <Error404 />;
   } else {
-    //Carroussel
-    /* const images = logementData.pictures.map((picture, index) => {
-      return (
-        //créer un état/state qui change lors du clic sur la flêche, qui affiche l'url différente sleon l'index
-        
-      );
-    }); */
-
     return (
       <div className="global-container">
         <div className="content-container">
@@ -84,6 +76,9 @@ function FicheLogement() {
               className="slide-arrow previous-slide-arrow"
               id="left-arrow"
             ></img>
+            <span className="carrousel-page-number">
+              {`${currentImage + 1}/${images.length}`}
+            </span>
           </div>
           <div className="infos-container">
             <div className="basic-infos-container">

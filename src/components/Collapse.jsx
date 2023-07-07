@@ -3,7 +3,7 @@ import { useState } from "react";
 
 function Collapse(props) {
   const objectRef = props.id;
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div className="collapse-container">
       <div className="collapse-header">
