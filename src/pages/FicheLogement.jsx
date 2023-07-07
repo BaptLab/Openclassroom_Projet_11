@@ -101,8 +101,18 @@ function FicheLogement() {
               <div className="tags-container">
                 <Tags id={logementData}></Tags>
               </div>
-              <div className="stars-container">
-                <Stars id={logementData}></Stars>
+              <div className="stars-and-ownermobile-container">
+                <div className="stars-container">
+                  <Stars id={logementData}></Stars>
+                </div>
+                <div className="owner-infos-container">
+                  <h3 className="owner-name">{logementData.host.name}</h3>
+                  <img
+                    alt={logementData.host.name}
+                    src={logementData.host.picture}
+                    className="owner-picture"
+                  ></img>
+                </div>
               </div>
             </div>
             <div className="collapse-section">
