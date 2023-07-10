@@ -1,9 +1,10 @@
 import collapseArrow from "../assets/collapse-arrow.png";
 import { useState } from "react";
+import CollapseContent from "./CollapseContent";
 
 function Collapse(props) {
   const objectRef = props.id;
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <div className="collapse-container">
       <div className="collapse-header">
@@ -18,17 +19,7 @@ function Collapse(props) {
         ></img>
       </div>
       <div className={`collapse-content-container ${open ? "active" : "inactive"}`}>
-        {props.type === "Description" ? (
-          <p className="collapse-content">{objectRef.description}</p>
-        ) : (
-          <ul className="equipment-list-container">
-            {objectRef.equipments.map((equipment, index) => (
-              <li className="collapse-content" key={index}>
-                {equipment}
-              </li>
-            ))}
-          </ul>
-        )}
+        <CollapseContent type={props.type} objectRef={objectRef}></CollapseContent>
       </div>
     </div>
   );

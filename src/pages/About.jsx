@@ -1,8 +1,8 @@
 import Banner from "../components/Banner";
-import CollapseAbout from "../components/CollapseAbout";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import bannerPicture from "../assets/banner-mountain.png";
+import Collapse from "../components/Collapse";
 
 function About() {
   return (
@@ -11,10 +11,10 @@ function About() {
         <Header pageType="About" />
         <Banner picture={bannerPicture} />
         <div className="collapse-about-page-container">
-          <CollapseAbout type="Fiabilité" />
-          <CollapseAbout type="Respect" />
-          <CollapseAbout type="Service" />
-          <CollapseAbout type="Sécurité" />
+          <Collapse type="Fiabilité" />
+          <Collapse type="Service" />
+          <Collapse type="Respect" />
+          <Collapse type="Sécurité" />
         </div>
       </div>
       <Footer />
