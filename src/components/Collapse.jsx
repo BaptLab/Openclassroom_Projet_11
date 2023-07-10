@@ -35,3 +35,11 @@ function Collapse(props) {
 }
 
 export default Collapse;
+
+/* function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+} */
